@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-react-redux-mongo-feedback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/nodejs-react-redux-mongo-feedback.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "cookie-session": "^1.3.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.7",
+    "nodemon": "^1.11.0",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path-parser": "^2.0.2",
+    "react":"15.6.1",
+    "react-dom":"^15.6.1",
+    "redux":"^3.7.2",
+    "react-redux":"^5.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "webpack":"^3.4.1"
+  },
+  "author": "benjaminhuanghuang@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/nodejs-react-redux-mongo-feedback/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/nodejs-react-redux-mongo-feedback#readme"
+}
