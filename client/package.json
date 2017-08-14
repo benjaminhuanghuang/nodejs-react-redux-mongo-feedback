@@ -13,14 +13,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "materialize-css": "^0.99.0",
-    "react": "^16.0.0-alpha.13",
-    "react-dom": "^16.0.0-alpha.13",
-    "react-redux": "^5.0.5",
+    "react":"15.6.1",
+    "react-dom":"^15.6.1",
+    "redux":"^3.7.2",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10",
     "react-stripe-checkout": "^2.4.0",
-    "redux": "^3.7.1",
-    "redux-form": "^7.0.1",
+    "redux-form": "^7.0.3",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
