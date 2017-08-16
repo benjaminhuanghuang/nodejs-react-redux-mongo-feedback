@@ -28,3 +28,6 @@
 - $ git push heroku master
 - $ heroku open
 - $ heroku logs
+
+## Set Heroku Env Variables
+  Project Settings -> 

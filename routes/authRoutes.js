@@ -18,6 +18,10 @@ module.exports = app => {
 
   // For testing
   app.get("/api/current_user", (req, res) => {
-    res.json(req.user);
+    res.send(req.user);
+  });
+  
+  app.get("/api/session", (req, res) => {
+    res.send(req.session);
   });
 };

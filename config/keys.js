@@ -1,6 +1,7 @@
-module.exports = {
-  googleClientID: "442193074514-ldrdv194ejbnv3hi18teplr50c7j0b0b.apps.googleusercontent.com",
-  googleClientSecret: 'q1FOFsgc-QplfkWE9s43dcoT',
-  mongoURI:"mongodb://admin:admin1234@ds127730.mlab.com:27730/react-feedback",
-  cookieKey:'c00k1e'
-};
+// keys.js - figure out what set of credentials to return
+if (process.env.NODE_ENV === "production") {
+  // Heroku will set process.env
+  module.exports = require('./prod');
+} else {
+  module.exports = require('./dev');
+}

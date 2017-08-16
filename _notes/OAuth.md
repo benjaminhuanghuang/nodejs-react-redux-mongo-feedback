@@ -36,3 +36,5 @@
 
   request->extract cookie-> passport pull user id out of cookie data -> deserialize user
     -> set req.user
+
+## 
