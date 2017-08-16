@@ -12,7 +12,7 @@ module.exports = app => {
   );
 
   app.get("/api/logout", (req, res) => {
-    req.logout();
+    req.logout();    // function attached to req by passport, remove the cookie
     res.redirect("/");
   });
 
