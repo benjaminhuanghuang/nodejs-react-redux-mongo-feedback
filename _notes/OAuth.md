@@ -14,4 +14,10 @@ passport-strategy (Authing with goolge, facebook or local database)
 
 
 ## Test
-  http://localhost:5000/auth/google
+  Access http://localhost:5000/auth/google
+
+  There will be Error: redirect_uri_mismatch
+  To fix this issue, we need to set "Authorized redirect URIs" in google developer console
+
+  After that, google oauth will redirect back to application
+  http://localhost:5000/auth/google/callback?code=4/V1GCxS4cT6TGDnaW5pQRHNSaLgvVxJ602nfvr40UJcw#
