@@ -1,6 +1,7 @@
 ## OAuth workflow
   ![oauth workflow](oath-workflow.png)
   
+
 ## OAuth dependencies
   npm i -S passport passport-google-oauth20
   
@@ -24,3 +25,6 @@
 
   After that, google oauth will redirect back to application
   http://localhost:5000/auth/google/callback?code=4/V1GCxS4cT6TGDnaW5pQRHNSaLgvVxJ602nfvr40UJcw#
+
+## Setup MongoDB
+  When user signs in , save a new record to 'users' collection.
