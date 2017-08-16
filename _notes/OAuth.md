@@ -1,6 +1,7 @@
 ## OAuth workflow
   ![oauth workflow](oath-workflow.png)
-  
+  http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html
+  http://passportjs.org/docs
 
 ## OAuth dependencies
   npm i -S passport passport-google-oauth20
@@ -28,3 +29,10 @@
 
 ## Setup MongoDB
   When user signs in , save a new record to 'users' collection.
+
+## Passport and session
+  In order to support login sessions, Passport will serialize and deserialize user instances 
+  to and from the session.
+
+  request->extract cookie-> passport pull user id out of cookie data -> deserialize user
+    -> set req.user

@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
-const passport = require('passport');
+const passport = require("passport");
 //
 const keys = require("./config/keys");
 require("./models/User"); // load schema into mongoose, SHOULD be run before passport
@@ -15,7 +15,8 @@ const app = express();
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, // 30days
-    keys: [keys.cookieKey]
+    keys: [keys.cookieKey],
+    name: "express-ses-react-feedback"   //defaults to express:sess.
   })
 );
 
