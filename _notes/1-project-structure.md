@@ -17,6 +17,11 @@
 
   npm start
 
+  - react
+  - react-dom
+  - redux
+  - react-router-dom
+  
 
 ## Run server and client together
   "dev": "concurrently \"npm run server:dev\" \"npm run client\""
