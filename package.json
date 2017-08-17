@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "server:dev": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -26,8 +28,8 @@
     "path-parser": "^2.0.2"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "concurrently": "^3.5.0"   
   },
   "author": "benjaminhuanghuang@gmail.com",
   "license": "ISC",

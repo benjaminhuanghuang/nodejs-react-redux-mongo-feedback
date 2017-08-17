@@ -3,7 +3,7 @@
 
 ## Server side architecture
   - express  
-  - passport
+  - passport + passport-google-oauth20
   - cookie-session
   - mongoose
 
@@ -12,3 +12,11 @@
   npm install -g create-react-app  
 
   create-react-app client
+
+  cd client 
+
+  npm start
+
+
+## Run server and client together
+  "dev": "concurrently \"npm run server:dev\" \"npm run client\""
