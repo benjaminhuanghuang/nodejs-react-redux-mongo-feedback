@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 //
 import Header from './Header';
+import Landing from './Landing';
 import * as actions from '../actions';
 
 class App extends Component {
@@ -16,7 +17,7 @@ class App extends Component {
        <BrowserRouter>
         <div>
           <Header/>
-          <Route exact path="/" component={Header}/>
+          <Route exact path="/" component={Landing}/>
           <Route exact path="/surveys" component={Header}/>
           <Route exact path="/surveys/new" component={Header}/>
         </div>
