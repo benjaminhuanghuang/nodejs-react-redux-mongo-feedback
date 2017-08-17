@@ -1,6 +1,6 @@
 import axios from "axios";
 //
-import FETCH_USER from "./types";
+import { FETCH_USER } from "./types";
 
 const fetchUser_v0 = () => {
   const request = axios.get('api/current_user');
