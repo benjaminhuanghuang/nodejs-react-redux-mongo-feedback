@@ -3,3 +3,5 @@ node_modules
 *.log
 /public/*.js
 dev.js
+package-lock.json
+yarn.lock

@@ -2,6 +2,7 @@ import axios from "axios";
 //
 import { FETCH_USER } from "./types";
 
+/*
 const fetchUser_v0 = () => {
   const request = axios.get("/api/current_user");
 
@@ -24,6 +25,7 @@ export const fetchUser_v2 = () => dispatch => {
     dispatch({ type: FETCH_USER, payload: res.data });
   });
 };
+*/
 
 // App boots up -> fetch user -> header update
 export const fetchUser = () => async dispatch => {
