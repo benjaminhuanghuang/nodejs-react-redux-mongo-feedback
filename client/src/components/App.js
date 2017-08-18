@@ -6,6 +6,9 @@ import Header from './Header';
 import Landing from './Landing';
 import * as actions from '../actions';
 
+const Dashboard =()=> <h1>Dashboard</h1>;
+const SurveyNew =()=> <h1>SurveyNew</h1>;
+
 class App extends Component {
   componentDidMount(){
     this.props.fetchUser();
@@ -18,8 +21,8 @@ class App extends Component {
         <div>
           <Header/>
           <Route exact path="/" component={Landing}/>
-          <Route exact path="/surveys" component={Header}/>
-          <Route exact path="/surveys/new" component={Header}/>
+          <Route exact path="/surveys" component={Dashboard}/>
+          <Route exact path="/surveys/new" component={SurveyNew}/>
         </div>
        </BrowserRouter>
       </div>
