@@ -30,7 +30,7 @@
   "dev": "concurrently \"npm run server:dev\" \"npm run client\""
 
 ## Prod deployment
-    ![prod deployment](prod-deployment.png)
+  ![prod deployment](prod-deployment.png)
     
     Continuous Integration (CI)  circleci.com
 
