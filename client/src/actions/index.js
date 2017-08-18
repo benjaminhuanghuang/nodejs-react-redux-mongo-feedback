@@ -7,21 +7,21 @@ const fetchUser_v0 = () => {
 
   return {
     type: FETCH_USER,
-    payload: request
+    payload: request.data
   };
 };
 
 export const fetchUser_v1 = () => {
   return function(dispatch) {
     axios.get("api/current_user").then(res => {
-      dispatch({ type: FETCH_USER, payload: res });
+      dispatch({ type: FETCH_USER, payload: res.data });
     });
   };
 };
 
 export const fetchUser_v2 = () => dispatch => {
   axios.get("api/current_user").then(res => {
-    dispatch({ type: FETCH_USER, payload: res });
+    dispatch({ type: FETCH_USER, payload: res.data });
   });
 };
 
