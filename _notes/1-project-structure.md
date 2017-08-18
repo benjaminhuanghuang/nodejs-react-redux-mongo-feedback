@@ -1,5 +1,7 @@
 # Full-stack web application project structure
   server side and client have package.json separately.
+  ![structure dev](structure-dev.png)
+  ![structure prod](structure-prod.png)
 
 ## Server side architecture
   - express  
