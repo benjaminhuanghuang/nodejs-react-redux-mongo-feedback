@@ -1,4 +1,4 @@
-const _ = require('lodash');
+ const _ = require('lodash');
 const Path = require('path-parser');
 const { URL } = require('url');
 const mongoose = require('mongoose');
@@ -10,6 +10,7 @@ const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
 const Survey = mongoose.model('surveys');
 
 module.exports = app => {
+  
   app.get('/api/surveys', requireLogin, async (req, res) => {
     const surveys = await Survey.find({ _user: req.user.id }).select({
       recipients: false

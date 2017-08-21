@@ -5,7 +5,11 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 //
 const keys = require("./config/keys");
+
 require("./models/User"); // load schema into mongoose, SHOULD be run before passport
+require("./models/Survey");
+require("./models/Recipient");
+
 require("./services/passport"); // run the code in passport.js
 mongoose.Promise = global.Promise;
 
@@ -28,6 +32,7 @@ app.use(passport.session());
 
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 // only for heroku env.
 // in dev env, we use a separate sever for client side

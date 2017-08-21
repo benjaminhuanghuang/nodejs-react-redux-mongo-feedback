@@ -27,7 +27,8 @@
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",
     "path-parser": "^2.0.2",
-    "stripe": "^4.24.0"
+    "stripe": "^4.24.0",
+    "sendgrid":"^5.2.2"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
