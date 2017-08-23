@@ -26,7 +26,6 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="container">
         <nav>
           <div className="nav-wrapper">
             <Link
@@ -38,7 +37,6 @@ class Header extends Component {
             </ul>
           </div>
         </nav>
-      </div>
     );
   }
 }
