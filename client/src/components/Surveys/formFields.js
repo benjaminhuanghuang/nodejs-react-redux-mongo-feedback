@@ -1,3 +1,5 @@
+// Shared in SurveyNew and SurveyFormReview
+
 export default [
   { label: 'Campaign Title', name: 'title', onValueError: "Provide a survey title" },
   { label: 'Subject Line', name: 'subject' },

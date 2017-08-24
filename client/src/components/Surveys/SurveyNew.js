@@ -2,6 +2,7 @@
   SurveyNew shows SurveyForm and SurveyFormReview
 */
 import React, { Component } from "react";
+import { reduxForm } from 'redux-form';  
 //
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
@@ -25,4 +26,10 @@ class SurveyNew extends Component {
   }
 }
 
-export default SurveyNew;
+/*
+  force clear the values in surveyForm when user left SurveyNew.
+  Because the from data will be clean by reduxFrom by default.
+*/
+export default reduxForm({
+  form: 'surveyForm'
+})(SurveyNew);

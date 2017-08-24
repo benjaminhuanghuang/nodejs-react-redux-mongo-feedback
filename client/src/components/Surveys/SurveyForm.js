@@ -57,5 +57,5 @@ function validate(values) {
 export default reduxForm({
   validate,
   form: 'surveyForm', 
-  destroyOnUnmount: false
+  destroyOnUnmount: false    // keep form values for review form and back
 })(SurveyForm);
