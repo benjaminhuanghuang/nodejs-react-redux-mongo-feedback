@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'; //
 //
 import * as actions from '../../actions';
 import formFields from './formFields';
@@ -11,7 +11,7 @@ import formFields from './formFields';
  props.onCancel came from SurveyForm
  props.formValues came from formReducer state.form.surveyForm.values
  props.submitSurvey came from actions
- props.history 
+ props.history came from withRouter
 */
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
