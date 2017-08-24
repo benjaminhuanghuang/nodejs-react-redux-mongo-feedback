@@ -4,7 +4,21 @@
 ## redux-form data flow
   http://redux-form.com/7.0.3/docs/GettingStarted.md/
 
+  ![redux-form-data-flow](redux-form-data-flow.png)
+
+  Typing calls action creator, updates state in the redux store
+
 ## Sample
+  Add reducer
+  ```
+  import { reducer as FormReducer} from 'redux-form';
+  
+  const reducers = combineReducers({
+    auth: AuthReducer,
+    form: FormReducer
+  });
+  ```
+
   SurveyForm
   ```
   <form onSubmit={this.props.handleSubmit(values=> console.log(values))}>
@@ -18,3 +32,6 @@
   ```
   <Field key={name} component={SurveyField} type="text" label={label} name={name}/>
   ```
+
+## Validation
+
