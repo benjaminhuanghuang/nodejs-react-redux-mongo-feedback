@@ -78,6 +78,11 @@
   }
 
   export default reduxForm({validate,form: 'surveyForm'})(SurveyForm);
+
+  reduxForm will pass error to the Filed component
+  
+  display error in filed component: {meta.error}
+
 ```
 
 ## Submit
