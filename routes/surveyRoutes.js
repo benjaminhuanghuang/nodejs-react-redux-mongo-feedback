@@ -1,6 +1,6 @@
- const _ = require('lodash');
+const _ = require('lodash');
 const Path = require('path-parser');
-const { URL } = require('url');
+const { URL } = require('url');   // parse url
 const mongoose = require('mongoose');
 const requireLogin = require('../middlewares/requireLogin');
 const requireCredits = require('../middlewares/requireCredits');
@@ -12,9 +12,8 @@ const Survey = mongoose.model('surveys');
 module.exports = app => {
   
   app.get('/api/surveys', requireLogin, async (req, res) => {
-    const surveys = await Survey.find({ _user: req.user.id }).select({
-      recipients: false
-    });
+    const surveys = await Survey.find({ _user: req.user.id })
+    .select({ recipients: false });
 
     res.send(surveys);
   });
@@ -23,19 +22,19 @@ module.exports = app => {
     res.send('Thanks for voting!');
   });
 
+  // Sendgrid makes a post to our server with data about all the clicks in the last 30 seconds 
+  // Our server process list of clicks on API
   app.post('/api/surveys/webhooks', (req, res) => {
-    console.log(req.body);
     const p = new Path('/api/surveys/:surveyId/:choice');
 
-    _.chain(req.body)
+    _.chain(req.body)  // create a lodash wrapper instance
       .map(({ email, url }) => {
-        console.log("url----", url);
         const match = p.test(new URL(url).pathname);
         if (match) {
           return { email, surveyId: match.surveyId, choice: match.choice };
         }
       })
-      .compact()
+      .compact()  // remove undefined elements
       .uniqBy('email', 'surveyId')
       .each(({ surveyId, email, choice }) => {
         Survey.updateOne(

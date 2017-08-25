@@ -9,4 +9,10 @@
 ## Models
 
 ## Mongoose
+$ node
+> require('survey')
+> const Survey = mongoose.model('survey')
+> Survey
+> Survey.find({})
+
 
