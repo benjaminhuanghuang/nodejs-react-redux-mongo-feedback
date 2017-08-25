@@ -14,14 +14,12 @@ module.exports = app => {
   );
 
   app.get("/api/logout", (req, res) => {
-    console.log("--logout", req.path);
     req.logout(); // function attached to req by passport, remove the cookie
     res.redirect("/");
   });
 
   // For testing
   app.get("/api/current_user", (req, res) => {
-    console.log("--current_user", req.user);
     res.send(req.user);
   });
 
